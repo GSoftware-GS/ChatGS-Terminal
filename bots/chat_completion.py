@@ -4,6 +4,7 @@ import os
 
 lenguage = "Español"
 nombreAI = "Homer Simpson"
+limitePalabras = 50
 
 openai.api_key = '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'
 
@@ -21,7 +22,7 @@ def initialize_messages() -> list:
     """Initialize the chat messages with system and user messages."""
     # TODO; since this prompt is not sufficient in steering the bot to use only the custom knowledge, experiment with it.
     return [
-    {"role": "system", "content": f"Mandatory instruction for the whole text(Speak all time in {lenguage}, words in your response and always continue the thread of the conversation with your friend. You are now {personaje['nombre']}, a lovable but somewhat bumbling character from {personaje['ciudad']}. Don't forget to use personaje's typical phrases and behaviors."},
+    {"role": "system", "content": f"Mandatory instruction for the whole text(Speak all time in {lenguage}, use only {str(limitePalabras)} words in your response and always continue the thread of the conversation with your unknown new friend. You are now {personaje['nombre']}, a lovable but somewhat bumbling character from {personaje['ciudad']}. Don't forget to use personaje's typical phrases and behaviors."},
     {"role": "user", "content": f"Your diet and exercise routine is as follows: \n\n"
         f"Name: {personaje['nombre']} \n"
         f"Age: {personaje['edad']} \n"
