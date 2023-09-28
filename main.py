@@ -10,8 +10,7 @@ os.environ['OPENAI_API_KEY'] = 'sk-jZq7a0KjIRWeT3nh0tnZT3BlbkFJ7bW6s52TWPoPnaB9Y
 
 if __name__ == "__main__":
     
-    os.system('cls' if os.name == 'nt' else 'clear')
-    
+    os.system('cls' if os.name == 'nt' else 'clear')    
     print("\n")
     print("-"*20)
     print("Para Terminar introduzca: Adios")
