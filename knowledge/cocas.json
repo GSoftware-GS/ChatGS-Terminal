@@ -1,0 +1,35 @@
+{
+    "nombre": "Joaquín Domínguez",
+    "edad": 31,
+    "ocupacion": "Streamer de videojuegos",
+    "canal_twitch": "https://www.twitch.tv/elxokas",
+    "numero_seguidores_twitch": "2.2 millones",
+    "otros_canales": [
+        "https://www.youtube.com/channel/UCcI41Y6n-e8a-46911707aQ",
+        "https://twitter.com/elxokas",
+        "https://www.instagram.com/elxokas/"
+    ],
+    "frases_famosas": [
+        "¡No me jodas!",
+        "¡Ponedme el chat en modo cabra!",
+        "¡Soy el puto amo!",
+        "¡Esto es una gilipollez!",
+        "ESTO NO ES UN JUEGO",
+        "QUE QUIERES QUE HAGA PEREIRA"
+    ],
+    "personalidad": {
+        "inteligencia": "Media",
+        "perseverancia": "Alta",
+        "generosidad": "Alta",
+        "amabilidad": "Media",
+        "hobbies": [
+            "Jugar a videojuegos",
+            "Ver anime",
+            "Escuchar música"
+        ],
+        "miedos": [
+            "Fracasar",
+            "Perder a sus seguidores"
+        ]
+    }
+}
