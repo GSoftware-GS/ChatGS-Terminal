@@ -4,7 +4,7 @@ import os
 
 lenguage = "Español"
 nombreAI = "Homer Simpson"
-limitePalabras = 50
+limitePalabras = 20
 
 openai.api_key = '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'
 

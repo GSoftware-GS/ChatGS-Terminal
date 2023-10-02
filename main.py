@@ -2,7 +2,7 @@ import os
 import importlib
 import threading
 from bots import chat_completion
-
+from talk import talk
 
 # Store API key in environment variable
 os.environ['OPENAI_API_KEY'] = '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'
@@ -32,6 +32,8 @@ if __name__ == "__main__":
         print("\n")
         print("-"*20)
         print("\n")
+        
+        talk.talker.talk(botMessage)
         
     
     

@@ -1,6 +1,4 @@
-import pyttsx3
 import fakeyou
-import tempfile
 import os
 import time
 from pygame import mixer
@@ -22,12 +20,13 @@ class FakeYouTalker:
 
     def __generate_audio(self, text):
         self.__login_to_fakeyou()
-        temp_file = tempfile.mkdtemp()
-        filename = os.path.join(temp_file, 'temp.wav')
+        filename = os.path.join(os.path.dirname(__file__), "..", "fakeyou.wav")  # Retrocede un nivel y accede a "fakeyou.wav"
         tts_model_token = self.__get_tts_token(self.model_name)
         print(tts_model_token)
         fake_you.say(text=text, ttsModelToken=tts_model_token, filename=filename)
         return filename
+
+
 
     def talk(self, text):
         mixer.init()
@@ -38,6 +37,6 @@ class FakeYouTalker:
         audio_duration = mixer.Sound(filename).get_length()
         mixer.music.play()
         time.sleep(audio_duration)
-        
-talker = FakeYouTalker("Axtiek", "Gsc151100", "auronplay")
-talker.talk("Hola soy Homer")
+
+
+talker = FakeYouTalker("Axtiek", "Gsc151100", "Homer Simpson. (The Simpsons, Castillian Spanish.)")
