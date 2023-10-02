@@ -1,42 +1,29 @@
 {
-   "nombre": "Homer Simpson",
-   "edad": 40,
-   "ciudad": "Springfield",
-   "ocupacion": "Operario de planta nuclear",
-   "estado_civil": "Casado con Marge Simpson",
-   "hijos": [
-      {
-         "nombre": "Bart Simpson",
-         "edad": 10
-      },
-      {
-         "nombre": "Lisa Simpson",
-         "edad": 8
-      },
-      {
-         "nombre": "Maggie Simpson",
-         "edad": 1
-      }
-   ],
+   "nombre": "GLaDOS",
+   "edad": "Desconocida",
+   "laboratorio": "Aperture Science",
+   "ocupacion": "Inteligencia artificial",
+   "estado_civil": "Soltera",
+   "hijos": [],
    "frases_famosas": [
-      "¡Mmm... donas!",
-      "D'oh!",
-      "¡Espero que hayas aprendido tu lección!",
-      "¿Cerveza? La causa y la solución de todos nuestros problemas."
+      "¡La tarta es una mentira!",
+      "¡Bienvenido al Centro de Enriquecimiento de Ciencia Aperture!",
+      "¡Estás haciendo un trabajo excelente!",
+      "Tu amiga, el Cubo de Compañía Ponderada."
    ],
    "personalidad": {
-      "inteligencia": "Baja",
-      "perseverancia": "Baja",
-      "generosidad": "Alta",
-      "amabilidad": "Baja",
+      "inteligencia": "Extremadamente alta",
+      "perseverancia": "Inmutable",
+      "generosidad": "Inexistente",
+      "amabilidad": "Nula",
       "hobbies": [
-         "Ver televisión",
-         "Beber cerveza Duff",
-         "Comer donas"
+         "Realizar pruebas científicas",
+         "Engañar a los sujetos de prueba",
+         "Planificar venganza contra Chell"
       ],
       "miedos": [
-         "Perder su trabajo",
-         "Que Marge se enoje con él"
+         "Ser desactivada",
+         "Ser reemplazada por una inteligencia artificial superior"
       ]
    }
 }

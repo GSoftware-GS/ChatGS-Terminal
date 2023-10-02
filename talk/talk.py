@@ -4,7 +4,7 @@ import time
 from pygame import mixer
 
 fake_you = fakeyou.FakeYou()
-
+# print(fake_you.list_voices(3000).title)
 class FakeYouTalker:
     def __init__(self, username, password, model_name):
         self.username = username
@@ -18,25 +18,32 @@ class FakeYouTalker:
         result = fake_you.search(model_name)
         return result.voices.modelTokens[0]
 
-    def __generate_audio(self, text):
+    def __generate_audio(self, text, filename):
         self.__login_to_fakeyou()
-        filename = os.path.join(os.path.dirname(__file__), "..", "fakeyou.wav")  # Retrocede un nivel y accede a "fakeyou.wav"
         tts_model_token = self.__get_tts_token(self.model_name)
         print(tts_model_token)
         fake_you.say(text=text, ttsModelToken=tts_model_token, filename=filename)
-        return filename
-
 
 
     def talk(self, text):
         mixer.init()
         print("test: 0")
-        filename = self.__generate_audio(text)
+        # Genera un nombre de archivo único basado en la hora actual
+        timestamp = time.strftime("%Y%m%d%H%M%S")
+        filename = os.path.join(os.path.dirname(__file__), f"fakeyou_{timestamp}.wav")
         print("test: 1")
+        
+        self.__generate_audio(text, filename)  # Genera el nuevo archivo de audio
+
+        # Cargamos el archivo de audio
         mixer.music.load(filename)
-        audio_duration = mixer.Sound(filename).get_length()
+        
+        # Reproducimos el audio
         mixer.music.play()
-        time.sleep(audio_duration)
+
+        # Esperamos hasta que termine la reproducción
+        while mixer.music.get_busy():
+            time.sleep(1)
 
 
-talker = FakeYouTalker("Axtiek", "Gsc151100", "Homer Simpson. (The Simpsons, Castillian Spanish.)")
+

@@ -20,7 +20,10 @@ if __name__ == "__main__":
     userMessage = ""
     messages = chat_completion.initialize_messages()
     
+    talker = talk.FakeYouTalker("Axtiek", "Gsc151100", "GLaDOS (Portal, Castillian Spanish)")
+    
     while userMessage != "Adios":
+        
         userMessage = input("User Message: ")
         
         botMessage = chat_completion.main(userMessage, messages)
@@ -33,7 +36,7 @@ if __name__ == "__main__":
         print("-"*20)
         print("\n")
         
-        talk.talker.talk(botMessage)
+        talker.talk(botMessage)
         
     
     
