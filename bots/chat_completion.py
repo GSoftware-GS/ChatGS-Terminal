@@ -17,7 +17,7 @@ def leer_archivo_json(nombre_archivo):
 
 def initialize_messages() -> list:
 
-    personaje = leer_archivo_json('knowledge\cliente.json')
+    personaje = leer_archivo_json('knowledge\glados.json')
 
     """Initialize the chat messages with system and user messages."""
     # TODO; since this prompt is not sufficient in steering the bot to use only the custom knowledge, experiment with it.
