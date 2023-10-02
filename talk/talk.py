@@ -23,9 +23,7 @@ class FakeYouTalker:
         self.__login_to_fakeyou()
         temp_file = tempfile.mkdtemp()
         filename = os.path.join(temp_file, 'temp.wav')
-        print(f"Filename en talk: {filename}")
         tts_model_token = self.__get_tts_token(self.model_name)
-        print(tts_model_token)
         fake_you.say(text=text, ttsModelToken=tts_model_token, filename=filename)
         return filename
 
