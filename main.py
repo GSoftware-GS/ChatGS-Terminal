@@ -8,9 +8,19 @@ import user
 # Store API key in environment variable
 os.environ['OPENAI_API_KEY'] = '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'
 
+personajes = ["glados","homer"]
 
-if __name__ == "__main__":
+def menu():
+    for personaje in personajes:
+        print(f"- {personaje} \n")
+    personaje = input(f"Elije tu personaje: ")
     
+    while personaje not in personajes:
+        personaje = input(f"Esa no es una opcion valida: ")
+
+    return personaje
+
+def presentacion():
     os.system('cls' if os.name == 'nt' else 'clear')    
     print("\n")
     print("-"*40)
@@ -18,10 +28,25 @@ if __name__ == "__main__":
     print("-"*40)
     print("\n")
     
-    userMessage = ""
-    messages = chat_completion.initialize_messages()
+    print("\n")
+    print("-"*40)
+    personaje = menu()
+    print("-"*40)
+    print("\n")
     
-    talker = talk.FakeYouTalker(user.user, user.password, "GLaDOS (Portal, Castillian Spanish)")
+    return personaje
+
+if __name__ == "__main__":
+    
+    userMessage = ""
+    messages = chat_completion.initialize_messages(personaje)
+    
+    personaje = presentacion()
+    
+    if personaje == "glados":
+        talker = talk.FakeYouTalker(user.user, user.password, "GLaDOS (Portal, Castillian Spanish)")
+    if personaje == "homer":
+        talker = talk.FakeYouTalker(user.user, user.password, "GLaDOS (Portal, Castillian Spanish)")
     
     while userMessage != "Adios":
         
