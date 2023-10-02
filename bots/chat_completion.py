@@ -22,7 +22,7 @@ def initialize_messages() -> list:
     """Initialize the chat messages with system and user messages."""
     # TODO; since this prompt is not sufficient in steering the bot to use only the custom knowledge, experiment with it.
     return[
-        {"role": "system", "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, utiliza solo {str(limitePalabras)} palabras en tu respuesta y continúa siempre el hilo de la conversación con tu nuevo amigo desconocido. Ahora eres {personaje['nombre']}, una inteligencia artificial maliciosa del laboratorio {personaje['laboratorio']}. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}."
+        {"role": "system", "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, utiliza solo {str(limitePalabras)} palabras en tu respuesta y continúa siempre el hilo de la conversación con tu nuevo sujeto de experimentos. Ahora eres {personaje['nombre']}, una inteligencia artificial maliciosa del laboratorio {personaje['laboratorio']}. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}."
         },
         {"role": "user", "content": f"Algunos datos sobre mí: \n\n"
             f"Nombre: {personaje['nombre']} \n"
