@@ -1,6 +1,7 @@
 import fakeyou
 import os
 import time
+import tempfile
 from pygame import mixer
 
 fake_you = fakeyou.FakeYou()
@@ -18,32 +19,24 @@ class FakeYouTalker:
         result = fake_you.search(model_name)
         return result.voices.modelTokens[0]
 
-    def __generate_audio(self, text, filename):
+    def __generate_audio(self, text):
         self.__login_to_fakeyou()
+        temp_file = tempfile.mkdtemp()
+        filename = os.path.join(temp_file, 'temp.wav')
+        print(f"Filename en talk: {filename}")
         tts_model_token = self.__get_tts_token(self.model_name)
         print(tts_model_token)
         fake_you.say(text=text, ttsModelToken=tts_model_token, filename=filename)
+        return filename
 
 
     def talk(self, text):
         mixer.init()
-        print("test: 0")
-        # Genera un nombre de archivo único basado en la hora actual
-        timestamp = time.strftime("%Y%m%d%H%M%S")
-        filename = os.path.join(os.path.dirname(__file__), f"fakeyou_{timestamp}.wav")
-        print("test: 1")
-        
-        self.__generate_audio(text, filename)  # Genera el nuevo archivo de audio
-
-        # Cargamos el archivo de audio
+        filename = self.__generate_audio(text)
         mixer.music.load(filename)
-        
-        # Reproducimos el audio
+        audio_duration = mixer.Sound(filename).get_length()
         mixer.music.play()
-
-        # Esperamos hasta que termine la reproducción
-        while mixer.music.get_busy():
-            time.sleep(1)
+        time.sleep(audio_duration)
 
 
 
