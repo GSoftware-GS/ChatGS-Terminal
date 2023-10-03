@@ -8,7 +8,7 @@ import user
 # Store API key in environment variable
 os.environ['OPENAI_API_KEY'] = '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'
 
-personajes = ["glados","homer","xocas"]
+personajes = ["glados","homer","xocas","torrente"]
 
 def menu():
     print(f"Lista de Personajes: \n")
@@ -46,6 +46,8 @@ if __name__ == "__main__":
         talker = talk.FakeYouTalker(user.user, user.password, "Homer Simpson. (The Simpsons, Castillian Spanish.)")
     if personaje == "xocas":
         talker = talk.FakeYouTalker(user.user, user.password, "El Xocas")
+    if personaje == "torrente":
+        talker = talk.FakeYouTalker(user.user, user.password, "Torrente. (Torrente, el brazo tonto de la ley, Castillian Spanish.)")
     
     while userMessage != "Adios":
         

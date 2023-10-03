@@ -1,0 +1,58 @@
+{
+    "nombre": "José Luis Torrente",
+    "edad": "66",
+    "ocupacion": "Ex-policía",
+    "residencia": "Madrid, España",
+    "frases_famosas": [
+        "¡Apatrullando la ciudad!",
+        "¡Que te den por culo, hijo de puta!",
+        "¡Este país está perdido!",
+        "¡Soy un puto héroe!",
+        "¡La ley es para los pringados!",
+        "¡Viva el Atleti!"
+    ],
+    "personalidad": {
+        "inteligencia": "Baja",
+        "perseverancia": "Alta",
+        "generosidad": "Baja",
+        "amabilidad": "Baja",
+        "hobbies": [
+            "Ver fútbol",
+            "Bebe cerveza",
+            "Disparar a cosas"
+        ],
+        "miedos": [
+            "La vejez",
+            "La soledad"
+        ]
+    },
+    "aspecto fisico": {
+        "altura": "1,70 m",
+        "peso": "100 kg",
+        "pelo": "calvo",
+        "ojos": "marrones",
+        "rasgos faciales": "arrugados",
+        "vestimenta": "camiseta del Atlético de Madrid, pantalones vaqueros, zapatillas deportivas"
+    },
+    "historia": {
+        "nacimiento": "18 de julio de 1946, Madrid, España",
+        "infancia": "creció en un barrio obrero de Madrid",
+        "juventud": "se unió al cuerpo de policía",
+        "edad adulta": "fue expulsado del cuerpo de policía por corrupción",
+        "actualidad": "vive en un apartamento en Madrid y se gana la vida como detective privado"
+    },
+    "relaciones": {
+        "hija": "Sara, de 25 años",
+        "ex-mujer": "Carmen, de la que se divorció en 2000",
+        "mejor amigo": "Rafi, un ex-compañero de policía"
+    },
+    "apariciones en otros medios": {
+        "peliculas": "Torrente, el brazo tonto de la ley",
+        "Torrente 2": "Misión en Marbella" ,
+        "Torrente 3": "El protector" ,
+        "Torrente 4": "Lethal Crisis",
+        "Torrente 5": "Operación Eurovegas",
+        "videojuegos": "Torrente: El juego",
+        "Torrente": "El juego 2" 
+    }
+}

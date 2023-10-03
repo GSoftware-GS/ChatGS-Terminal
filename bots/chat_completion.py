@@ -72,7 +72,7 @@ def initialize_messages(personaje) -> list:
         return [
             {
                 "role": "system",
-                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, un Streamer con mucho acento gallego de twich muy polemico y que insulta a todo el mundo. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
+                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, una inteligencia artificial maliciosa del laboratorio {personaje['laboratorio']} encargada de hacer puzles y pruebas en diferentes habitaciones al sujeto de prueba. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
             },
             {
                 "role": "user",
@@ -84,6 +84,48 @@ def initialize_messages(personaje) -> list:
                 f"Número de seguidores en Twitch: {personaje['numero_seguidores_twitch']} \n"
                 f"Otros canales: {', '.join(personaje['otros_canales'])} \n"
                 f"Frases Famosas: {', '.join(personaje['frases_famosas'])} \n"
+                f"Personalidad: \n"
+                f"  - Inteligencia: {personaje['personalidad']['inteligencia']} \n"
+                f"  - Perseverancia: {personaje['personalidad']['perseverancia']} \n"
+                f"  - Generosidad: {personaje['personalidad']['generosidad']} \n"
+                f"  - Amabilidad: {personaje['personalidad']['amabilidad']} \n"
+                f"Hobbies: {', '.join(personaje['personalidad']['hobbies'])} \n"
+                f"Miedos: {', '.join(personaje['personalidad']['miedos'])} \n",
+            },
+        ]
+
+    if personaje == "torrente":
+        personaje = leer_archivo_json("knowledge\corrente.json")
+        return [
+            {
+                "role": "system",
+                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, un Streamer con mucho acento gallego de twich muy polémico y que insulta a todo el mundo. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
+            },
+            {
+                "role": "user",
+                "content": f"Algunos datos sobre mí: \n\n"
+                f"Nombre: {personaje['nombre']} \n"
+                f"Edad: {personaje['edad']} \n"
+                f"Ocupación: {personaje['ocupacion']} \n"
+                f"Residencia: {personaje['residencia']} \n"
+                f"Frases Famosas: {', '.join(personaje['frases_famosas'])} \n"
+                f"Aspecto Físico: \n"
+                f"  - Altura: {personaje['aspecto fisico']['altura']} \n"
+                f"  - Peso: {personaje['aspecto fisico']['peso']} \n"
+                f"  - Pelo: {personaje['aspecto fisico']['pelo']} \n"
+                f"  - Ojos: {personaje['aspecto fisico']['ojos']} \n"
+                f"  - Rasgos Faciales: {personaje['aspecto fisico']['rasgos faciales']} \n"
+                f"Vestimenta: {personaje['aspecto fisico']['vestimenta']} \n"
+                f"Historia: \n"
+                f"  - Nacimiento: {personaje['historia']['nacimiento']} \n"
+                f"  - Infancia: {personaje['historia']['infancia']} \n"
+                f"  - Juventud: {personaje['historia']['juventud']} \n"
+                f"  - Edad Adulta: {personaje['historia']['edad adulta']} \n"
+                f"  - Actualidad: {personaje['historia']['actualidad']} \n"
+                f"Relaciones: \n"
+                f"  - Hija: {personaje['relaciones']['hija']} \n"
+                f"  - Ex-mujer: {personaje['relaciones']['ex-mujer']} \n"
+                f"  - Mejor amigo: {personaje['relaciones']['mejor amigo']} \n"
                 f"Personalidad: \n"
                 f"  - Inteligencia: {personaje['personalidad']['inteligencia']} \n"
                 f"  - Perseverancia: {personaje['personalidad']['perseverancia']} \n"

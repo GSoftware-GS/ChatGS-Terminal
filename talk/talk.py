@@ -5,7 +5,7 @@ import tempfile
 from pygame import mixer
 
 fake_you = fakeyou.FakeYou()
-# print(fake_you.list_voices(3000).title)
+# print(fake_you.list_voices(3500).title)
 class FakeYouTalker:
     def __init__(self, username, password, model_name):
         self.username = username
