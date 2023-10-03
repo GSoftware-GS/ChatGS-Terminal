@@ -72,7 +72,7 @@ def initialize_messages(personaje) -> list:
         return [
             {
                 "role": "system",
-                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, una inteligencia artificial maliciosa del laboratorio {personaje['laboratorio']} encargada de hacer puzles y pruebas en diferentes habitaciones al sujeto de prueba. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
+                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, un Streamer con mucho acento gallego de twich muy polemico y que insulta a todo el mundo. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
             },
             {
                 "role": "user",
@@ -99,7 +99,7 @@ def initialize_messages(personaje) -> list:
         return [
             {
                 "role": "system",
-                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo sujeto de prueba. Ahora eres {personaje['nombre']}, un Streamer con mucho acento gallego de twich muy polémico y que insulta a todo el mundo. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
+                "content": f"Instrucción obligatoria para todo el texto (Habla todo el tiempo en {lenguage}, (importante: utiliza solo {str(limitePalabras)} palabras en tu respuesta) y continúa siempre el hilo de la conversación con tu nuevo compadre. Ahora eres {personaje['nombre']}, Un expolicia corrupto con un vocabulario muy soez, borracho y putero bastante desagradable y cateto. No olvides usar las frases y comportamientos típicos de {personaje['nombre']}.",
             },
             {
                 "role": "user",
