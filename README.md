@@ -12,7 +12,7 @@ Para comenzar con este proyecto, sigue estos pasos:
 
 1. **Clona este repositorio**: Haz clic en el botón "Code" y copia la URL. En tu terminal, ejecuta `git clone https://github.com/GSoftware-GS/ChatGS.git`.
 2. **Instala los paquetes necesarios**: En GUI/gui.py Ponga su OpenAI KEY.
-3. **Añade tus documentos de texto**: Coloca los documentos JSON que desees que el chatbot utilice en el directorio `knowledge`.
+3. **Añade tus documentos de texto**: Coloca los documentos JSON que desees que el chatbot utilice en el directorio `knowledge` Y añadiendo el codigo correspondiente
 4. **Ejecuta el proyecto**: Inicia el chatbot ejecutando `python main.py` en tu terminal.
 
 ## 🤖 Tecnologías Utilizadas
@@ -20,6 +20,7 @@ Para comenzar con este proyecto, sigue estos pasos:
 Este proyecto utiliza las siguientes tecnologías:
 
 - [OpenAI API](https://openai.com/)
+- [FakeYou API](https://fakeyou.com/)
 
 ## 🌟 Cómo Contribuir
 
