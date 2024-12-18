@@ -1,3 +1,3 @@
-
-user = "Axtiek"
-password = "Gsc151100"
+#Your credentials from FAkeYou
+user = "[user]"
+password = "[password]"
