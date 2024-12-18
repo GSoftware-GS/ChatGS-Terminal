@@ -6,7 +6,7 @@ from talk import talk
 import user
 
 # Store API key in environment variable
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '[YOUR_API_KEY]'
 
 personajes = ["glados","homer","xocas","torrente"]
 
