@@ -5,8 +5,6 @@ from bots import chat_completion
 from talk import talk
 import user
 
-# Store API key in environment variable
-os.environ['OPENAI_API_KEY'] = '[YOUR_API_KEY]'
 
 personajes = ["glados","homer","xocas","torrente"]
 
