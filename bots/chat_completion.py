@@ -5,7 +5,7 @@ import os
 lenguage = "Español"
 limitePalabras = 10
 
-openai.api_key = "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"
+openai.api_key = "[Your_API_Key]"
 
 
 def leer_archivo_json(nombre_archivo):
